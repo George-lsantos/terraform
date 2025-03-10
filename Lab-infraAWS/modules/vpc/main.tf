@@ -54,7 +54,7 @@ resource "aws_eip" "nat_eip" {
 
 
 # Criar NAT Gateway na subnet pública
-resource "aws_nat_gateway" "NAT" {
+resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat_eip.id
   subnet_id     = aws_subnet.subnet_public[0].id  # NAT ficará na primeira subnet pública
 
@@ -70,7 +70,7 @@ resource "aws_route_table" "rtb_private" {
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.NAT.id
+    nat_gateway_id = aws_nat_gateway.nat.id
   }
 
   tags = local.vpc_tag.rtb_private

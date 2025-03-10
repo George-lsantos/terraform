@@ -16,7 +16,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_instance.SRV-Linux](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
+| [aws_instance.srv-linux](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 
 ## Inputs
 
@@ -26,4 +26,6 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_ec2_id"></a> [ec2\_id](#output\_ec2\_id) | n/a |

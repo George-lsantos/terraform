@@ -7,7 +7,7 @@ variable "allowed_ports" {
   ]
 }
 
-resource "aws_security_group" "SG" {
+resource "aws_security_group" "sg" {
   name = "meu-sg"
   vpc_id = aws_vpc.vpc.id
   dynamic "ingress" {
