@@ -17,10 +17,12 @@ variable "cidr_block_subnet_private"{
  #Variável para definir as AZs desejadas
 variable "az_pub" {
   type    = list(string)
+  description = "availability_zone  para subnet public"
 }
 
 variable "az_priv" {
   type    = list(string)
+  description = "availability_zone  para subnet privado"
 }
 
 variable "availability_zones_suffix" {

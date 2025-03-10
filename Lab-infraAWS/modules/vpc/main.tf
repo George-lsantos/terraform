@@ -1,4 +1,4 @@
-#criação de VPC
+#Criação de VPC
 resource "aws_vpc" "vpc" {
   cidr_block = var.cidr_block
   enable_dns_support   = true
@@ -6,13 +6,13 @@ resource "aws_vpc" "vpc" {
   tags = local.vpc_tag.vpc
 }
 
-#Criação de IGW
+#Criação de Internet_gateway"
 resource "aws_internet_gateway" "igw_vpc" {
   vpc_id = aws_vpc.vpc.id
   tags = local.vpc_tag.igw
 }
 
-#Criação de  subnet
+#Criação de  subnet publica
 resource "aws_subnet" "subnet_public" {
   count = length(var.cidr_block_subnet_public)
   vpc_id = aws_vpc.vpc.id
@@ -23,7 +23,7 @@ resource "aws_subnet" "subnet_public" {
   }
 }
 
-#Criação de  subnet
+#Criação de  subnet privada
 resource "aws_subnet" "subnet_private" {
   count = length(var.cidr_block_subnet_private)
   vpc_id = aws_vpc.vpc.id
@@ -34,7 +34,7 @@ resource "aws_subnet" "subnet_private" {
   }
 }
 
-#Criação de RT public
+#Criação de Route table public
 resource "aws_route_table" "rtb_public" {
   vpc_id = aws_vpc.vpc.id
 
@@ -70,7 +70,7 @@ resource "aws_route_table" "rtb_private" {
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.NAT.id  # Sem count aqui
+    nat_gateway_id = aws_nat_gateway.NAT.id
   }
 
   tags = local.vpc_tag.rtb_private
