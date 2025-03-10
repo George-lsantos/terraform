@@ -1,0 +1,34 @@
+# Ignore os arquivos locais de estado do Terraform
+*.tfstate
+*.tfstate.*
+
+# Ignore os logs de execução de plano do Terraform
+*.tfplan
+
+# Ignore o arquivo de bloqueio de dependências do Terraform
+.terraform.lock.hcl
+
+# Ignore o diretório de arquivos de trabalho do Terraform
+.terraform/
+
+# Ignore variáveis sensíveis locais
+*.tfvars
+*.tfvars.json
+
+# Arquivos de saída
+crash.log
+
+# Ignorar arquivos de estado do Terraform
+*.tfstate
+*.tfstate.backup
+
+# Ignorar diretórios do Terraform
+.terraform/
+
+# Ignorar arquivos de saída e logs
+*.log
+
+# Ignorar o arquivo de variáveis sensíveis (se existir)
+*.tfvars
+
+# Ignorar outros arquivos que você não deseja versionar
