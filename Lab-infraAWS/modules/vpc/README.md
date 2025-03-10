@@ -26,6 +26,7 @@ No modules.
 | [aws_route_table.rtb_public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
 | [aws_route_table_association.rtb_p_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 | [aws_route_table_association.rtb_p_subnet_private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
+| [aws_security_group.SG](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 | [aws_subnet.subnet_private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_subnet.subnet_public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_vpc.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
@@ -34,6 +35,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_allowed_ports"></a> [allowed\_ports](#input\_allowed\_ports) | n/a | `list(object({ port = number, protocol = string }))` | <pre>[<br/>  {<br/>    "port": 80,<br/>    "protocol": "tcp"<br/>  },<br/>  {<br/>    "port": 443,<br/>    "protocol": "tcp"<br/>  },<br/>  {<br/>    "port": 22,<br/>    "protocol": "tcp"<br/>  }<br/>]</pre> | no |
 | <a name="input_availability_zones_suffix"></a> [availability\_zones\_suffix](#input\_availability\_zones\_suffix) | n/a | `list(string)` | n/a | yes |
 | <a name="input_az_priv"></a> [az\_priv](#input\_az\_priv) | availability\_zone  para subnet privado | `list(string)` | n/a | yes |
 | <a name="input_az_pub"></a> [az\_pub](#input\_az\_pub) | availability\_zone  para subnet public | `list(string)` | n/a | yes |

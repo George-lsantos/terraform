@@ -8,7 +8,7 @@ module "vpc" {
         az_priv = ["us-east-1a", "us-east-1b", "us-east-1c"] 
         availability_zones_suffix = ["a", "b", "c", "d", "e", "f"]  # 🔹 Define as letras das AZs manualmente
 }
-
+/*
 module "ec2" {
   source = "../../modules/EC2"
-}
+}*/
