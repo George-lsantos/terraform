@@ -35,8 +35,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_availability_zones_suffix"></a> [availability\_zones\_suffix](#input\_availability\_zones\_suffix) | n/a | `list(string)` | n/a | yes |
-| <a name="input_az_priv"></a> [az\_priv](#input\_az\_priv) | n/a | `list(string)` | n/a | yes |
-| <a name="input_az_pub"></a> [az\_pub](#input\_az\_pub) | n/a | `list(string)` | n/a | yes |
+| <a name="input_az_priv"></a> [az\_priv](#input\_az\_priv) | availability\_zone  para subnet privado | `list(string)` | n/a | yes |
+| <a name="input_az_pub"></a> [az\_pub](#input\_az\_pub) | availability\_zone  para subnet public | `list(string)` | n/a | yes |
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Cidr\_block da VPC | `string` | n/a | yes |
 | <a name="input_cidr_block_subnet_private"></a> [cidr\_block\_subnet\_private](#input\_cidr\_block\_subnet\_private) | Cidr\_block da subnet private | `list(string)` | n/a | yes |
 | <a name="input_cidr_block_subnet_public"></a> [cidr\_block\_subnet\_public](#input\_cidr\_block\_subnet\_public) | Cidr\_block da subnet public | `list(string)` | n/a | yes |
