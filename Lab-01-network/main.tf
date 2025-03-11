@@ -66,7 +66,7 @@ resource "aws_eip" "nat_eip" {
 }
 
 # Criar NAT Gateway na subnet pública
-resource "aws_nat_gateway" "NAT" {
+resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat_eip.id
   subnet_id     = aws_subnet.subnet_public.id  # O NAT Gateway precisa estar em uma subnet pública
 
